@@ -3,3 +3,4 @@ storage
 .env
 output
 .ui/
+.DS_Store
