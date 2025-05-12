@@ -1,5 +1,9 @@
 # NAIS RAG Tutorial
 
+## Get a free Google Gemini API key
+
+https://ai.google.dev/gemini-api/docs/api-key
+
 ## Let's start here:
 
 https://docs.llamaindex.ai/en/stable/examples/chat_engine/chat_engine_react/
