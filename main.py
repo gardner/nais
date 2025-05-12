@@ -17,6 +17,20 @@ def create_app():
         ui_config=UIConfig(
             component_dir=COMPONENT_DIR,
             app_title="Chat App",
+            starter_questions=[
+                "What is this document?",
+                "When is the submission deadline for feedback?",
+                "How can interested parties submit comments?",
+                "What are Maximum Residue Levels (MRLs)?",
+                "How are MRLs determined?",
+                "How is dietary risk from residues assessed?",
+                "How many agricultural compounds are affected by the proposed amendments?",
+                "Why are the MRLs for methamidophos being changed?",
+                "What are the changes proposed for glyphosate?",
+                "Are any new agricultural compounds being added to the MRL notice?",
+                "Do the proposed MRLs pose any health risks?",
+                "How do the proposed MRLs compare to international standards?",
+            ]
         ),
         logger=logger,
     )

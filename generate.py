@@ -2,7 +2,8 @@ import logging
 import os
 
 from dotenv import load_dotenv
-from llama_index.llms.openai import OpenAI
+from langchain_google_genai import ChatGoogleGenerativeAI
+from llama_index.llms.langchain import LangChainLLM
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger()
@@ -56,8 +57,8 @@ def generate_ui_for_workflow():
         raise ImportError("Couldn't generate UI component for the current workflow.")
     from llama_index.server.gen_ui import generate_event_component
 
-    # works also well with Claude 3.7 Sonnet or Gemini Pro 2.5
-    llm = OpenAI(model="gpt-4.1")
+
+    llm = llm = LangChainLLM(ChatGoogleGenerativeAI(model="gemini-2.0-flash"))
     code = asyncio.run(generate_event_component(event_cls=UIEventData, llm=llm))
     with open(f"{COMPONENT_DIR}/ui_event.jsx", "w") as f:
         f.write(code)

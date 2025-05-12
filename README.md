@@ -1,17 +1,27 @@
+# NAIS RAG Tutorial
+
+## Let's start here:
+
+https://docs.llamaindex.ai/en/stable/examples/chat_engine/chat_engine_react/
+
+##
+
 This is a [LlamaIndex](https://www.llamaindex.ai/) simple agentic RAG project using [Agent Workflows](https://docs.llamaindex.ai/en/stable/examples/agent/agent_workflow_basic/).
 
 ## Getting Started
 
-First, setup the environment with uv:
+### Install `uv`:
 
-> **_Note:_** This step is not needed if you are using the dev-container.
+https://docs.astral.sh/uv/getting-started/installation/
+
+Then, setup the environment with uv:
 
 ```shell
 uv sync
 ```
 
 Then check the parameters that have been pre-configured in the `.env` file in this directory.
-Make sure you have set the `OPENAI_API_KEY` for the LLM.
+Make sure you have set the `GOOGLE_API_KEY` for the LLM.
 
 Second, generate the embeddings of the documents in the `./data` directory:
 
